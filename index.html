@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Yummy</title>
+  
+  <link href="CSS/bootstrap.min.css" rel="stylesheet" />
+  <link href="CSS/style.css" rel="stylesheet" />
+</head>
+<body>
+  <div class="d-flex">
+    <!-- SIDE NAV -->
+    <nav id="sideNav" class="bg-light vh-100 p-3 border-end">
+      <img src="./Images/imgi_1_logo.png" alt="Yummy Logo" class="img-fluid mb-4" />
+      <button id="toggleNav" class="btn btn-outline-primary mb-3">☰ Menu</button>
+
+      <div id="menuList" class="d-none bg-black ">
+        <ul class="list-unstyled">
+        <li><a href="#" data-action="search" class="menu-link text-bg-danger d-block py-2">Search</a></li>
+        <li><a href="#" data-action="categories" class="menu-link d-block py-2">Categories</a></li>
+        <li><a href="#" data-action="area" class="menu-link d-block py-2">Area</a></li>
+        <li><a href="#" data-action="ingredients" class="menu-link d-block py-2">Ingredients</a></li>
+        <li><a href="#" data-action="contact" class="menu-link d-block py-2">Contact Us</a></li>
+      </ul>
+      </div>
+    </nav>
+
+    <!-- MAIN CONTENT -->
+    <main class="flex-grow-1 p-4">
+      <div id="controls"></div>
+      <div id="mealsContainer" class="row g-3 mt-3"></div>
+      <div id="mealDetails" class="mt-4"></div>
+    </main>
+  </div>
+  
+  <Script src="./JS/bootstrap.bundle.min.js"></Script>
+  <script src="JS/index.js"></script>
+</body>
+</html>
