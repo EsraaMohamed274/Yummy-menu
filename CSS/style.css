@@ -1,0 +1,18 @@
+/* style.css */
+.menu-link {
+  transform: translateX(-10px);
+  transition:  0.35s ease, transform 0.35s ease;
+}
+
+.side-open .menu-link {
+  opacity: 1;
+  transform: translateX(0);
+}
+
+.menu-link:nth-child(1) { transition-delay: 0.05s; }
+.menu-link:nth-child(2) { transition-delay: 0.12s; }
+.menu-link:nth-child(3) { transition-delay: 0.19s; }
+.menu-link:nth-child(4) { transition-delay: 0.26s; }
+.menu-link:nth-child(5) { transition-delay: 0.33s; }
+
+.meal-card img { width:100%; height:180px; object-fit:cover; }
