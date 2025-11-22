@@ -1,6 +1,6 @@
 main{
   position: absolute;
-  left: 10%;
+  left: 7%;
 }
 
 .pointer {
@@ -99,10 +99,6 @@ main.shifted {
   #menuList.open {
     width: 40vw;
   }
-  main{
-  position: absolute;
-  left: 10%;
-}
 }
 
 /* md screen */
@@ -110,8 +106,4 @@ main.shifted {
   #menuList.open {
     width: 20vw;
   }
-  main{
-  position: absolute;
-  left: 7%;
-}
 }
