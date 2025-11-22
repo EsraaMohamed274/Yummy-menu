@@ -10,7 +10,7 @@ function setupContactValidation() {
 
   const nameRegex = /^[A-Za-z\u0600-\u06FF ]{2,50}$/; // allow Arabic letters too
   const emailRegex = /^[^\s@]+@[^\s@]+\.[^\s@]{2,}$/;
-  const phoneRegex = /^[0-9+\-() ]{7,20}$/;
+  const phoneRegex = /^01[0-2,5]{1}[0-9]{8}$/;
   const ageRegex = /^(?:[1-9][0-9]?|1[01][0-9]|120)$/;
   const passwordRegex =
     /^(?=.*[a-z])(?=.*[A-Z])(?=.*\d)(?=.*[@$!%*?&])[A-Za-z\d@$!%*?&]{8,}$/;
