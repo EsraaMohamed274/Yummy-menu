@@ -19,10 +19,19 @@ async function fetchJSON(url) {
   return res.json();
 }
 
-async function fetchMealDetailsById(id) {
-  const data = await fetchJSON(`${apiBase}/lookup.php?i=${encodeURIComponent(id)}`);
-  return (data.meals && data.meals[0]) || null;
+async function fetchMealsByName() {
+  try {
+    const data = await fetchJSON(
+      `${apiBase}/search.php?s=`
+    );
+    const meals = data.meals || [];
+    renderMeals(meals.slice(0, 20));
+  } catch (err) {
+    console.error(err);
+    renderMeals([]);
+  }
 }
+
 
 /* ---------- RENDERING ---------- */
 function renderMeals(meals) {
