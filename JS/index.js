@@ -74,15 +74,6 @@ function showMealDetails(meal) {
     return;
   }
 
-  // collect ingredients + measures
-  const ingredients = [];
-  for (let i = 1; i <= 20; i++) {
-    const ing = meal[`strIngredient${i}`];
-    const meas = meal[`strMeasure${i}`];
-    if (ing && ing.trim() !== "") {
-      ingredients.push(`${meas ? meas : ""} ${ing}`.trim());
-    }
-  }
 
 }
 
