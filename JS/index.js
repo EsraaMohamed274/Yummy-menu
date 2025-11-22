@@ -46,7 +46,7 @@ function renderMeals(meals) {
     const col = document.createElement("div");
     col.className = "col-12 col-md-4 col-lg-3";
     col.innerHTML = `
-      <div class="card meal-card meal view-more overflow-hidden">
+      <div class="card meal-card meal view-more overflow-hidden border-0">
         <img src="${m.strMealThumb}" class="card-img-top" alt="${m.strMeal}">
         <div class="card-body p-2 text view-more" data-id="${m.idMeal}">
           <div class="position-absolute top-50 translate-middle-y">
@@ -84,28 +84,5 @@ function showMealDetails(meal) {
     }
   }
 
-  mealDetails.innerHTML = `
-    <div class="p-3">
-      <div class="row g-4">
-        <div class="col-md-4">
-          <img src="${meal.strMealThumb}" class="img-fluid rounded-start" alt="${meal.strMeal}">
-          <h3>${meal.strMeal}</h3>
-        </div>
-        <div class="col-md-8">
-          <div class="card-body">
-            <h5>Instructions</h5>
-            <p>${meal.strInstructions}</p>
-            <p><strong>Category:</strong> ${meal.strCategory}</p>
-            <p><strong>Area:</strong> ${meal.strArea}</p>
-            <p><strong>Tags:</strong> ${meal.strTags || "-"}</p>
-            <h5>Ingredients</h5>
-            <ul>${ingredients.map(i => `<li>${i}</li>`).join("")}</ul>
-            <p><strong>Source:</strong> ${meal.strSource ? `<a href="${meal.strSource}" target="_blank">${meal.strSource}</a>` : "-"}</p>
-            <p><strong>Youtube:</strong> ${meal.strYoutube ? `<a href="${meal.strYoutube}" target="_blank">Watch</a>` : "-"}</p>
-          </div>
-        </div>
-      </div>
-    </div>
-  `;
 }
 
