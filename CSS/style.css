@@ -3,6 +3,9 @@ main{
   left: 7%;
 }
 
+.pointer {
+  cursor: pointer;
+}
 
 .mealName {
   position: relative;

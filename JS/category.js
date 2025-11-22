@@ -59,17 +59,16 @@ function renderCategories(categories) {
     col.innerHTML = `
     
       <div class="card category-card overflow-hidden meal bg-black">
-        <img src="${c.strCategoryThumb}"class="w-75 rounded-circle" alt="${
+        <img src="${c.strCategoryThumb}"class="w-100 rounded-circle" alt="${
       c.strCategory
     }">
         <div class="card-body p-2 text view-more">
                     <div class="position-absolute top-50 translate-middle-y">
 
         <h5 class="card-title mb-0">${c.strCategory}</h5>
-          <p class="card-text small">${c.strCategoryDescription.slice(
-            0,
-            100
-          )}...</p>
+          <p class="card-text small">${c.strCategoryDescription && c.strCategoryDescription.length > 20 
+    ? c.strCategoryDescription.slice(0, 100)
+    : c.strCategoryDescription}</p>
         </div>
         </div>
       </div>

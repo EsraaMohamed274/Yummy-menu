@@ -35,13 +35,13 @@ async function loadMealDetails() {
         <div class="col-md-4">
           <img src="${
             meal.strMealThumb
-          }" class="img-fluid rounded-start" alt="${meal.strMeal}">
+          }" class="w-100 rounded-start" alt="${meal.strMeal}">
         <h3>${meal.strMeal}</h3>
           </div>
         <div class="col-md-7">
           <div class="card-body">
             <h2>Instructions</h2>
-            <p>${meal.strInstructions}</p>
+            <p><small>${meal.strInstructions}</small></p>
             <h4><strong>Category:</strong> ${meal.strCategory}</h4>
             <h4><strong>Area:</strong> ${meal.strArea}</h4>
             

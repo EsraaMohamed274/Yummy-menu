@@ -37,7 +37,7 @@ function renderMeals(meals) {
     col.className = "col-12 col-md-4 col-lg-3 mb-3";
     col.innerHTML = `
       <div class="  card meal-card meal overflow-hidden border-0 view-more">
-        <img src="${m.strMealThumb}" class="card-img-top" alt="${m.strMeal}">
+        <img src="${m.strMealThumb}" class="card-img-top w-100" alt="${m.strMeal}">
         <div class=" card-body p-2 text view-more" data-id="${m.idMeal}">
           <div class="position-absolute top-50 translate-middle-y">
   <h3 class="card-title mb-1 mealName">${m.strMeal}</h3>
@@ -55,27 +55,33 @@ function renderIngredients(Ingredients = []) {
   mealsContainer.innerHTML = "";
 
   Ingredients.slice(0, 20).forEach((ingredient) => {
-  const col = document.createElement("div");
-  col.className = "col-12 col-md-4 col-lg-3 mb-3";
+    const col = document.createElement("div");
+    col.className = "col-12 col-md-4 col-lg-3 mb-3";
 
-  col.innerHTML = `
+    col.innerHTML = `
     <div class="card Ingredients-card bg-black text-white">
       <div class="card-body p-2 view-more text-center">
         <i class="fa-solid fa-drumstick-bite fa-5x"></i>
         <h4 class="card-title mb-0 text-white">${ingredient.strIngredient}</h4>
+        <p class="card-title mb-0 text-white">${
+          ingredient.strDescription
+            ? ingredient.strDescription.split(".")[0] + "."
+            : ""
+        }</p>
+
       </div>
     </div>
   `;
 
-  col.querySelector(".Ingredients-card").addEventListener("click", () => {
-    fetchMealsByIngredients(ingredient.strIngredient);
-  });
+    col.querySelector(".Ingredients-card").addEventListener("click", () => {
+      fetchMealsByIngredients(ingredient.strIngredient);
+    });
 
-  mealsContainer.appendChild(col);
-});
+    mealsContainer.appendChild(col);
+  });
 }
 
-renderIngredients()
+renderIngredients();
 
 // Load Ingredients on page load
 window.addEventListener("load", async () => {
@@ -84,8 +90,6 @@ window.addEventListener("load", async () => {
     renderIngredients(Ingredients);
   }
 });
-
-
 
 mealsContainer.addEventListener("click", (e) => {
   const mealCard = e.target.closest(".view-more");
