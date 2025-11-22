@@ -61,7 +61,7 @@ function renderMeals(meals) {
 
 // click handler for view details
 mealsContainer.addEventListener("click", async (e) => {
-  const clicked = e.target.closest(".view-more");
+  const clicked = e.target.closest("[data-id]");
   if (clicked) {
     const id = clicked.dataset.id;
     window.location.href = `./Pages/meal/meal.html?id=${id}`;
