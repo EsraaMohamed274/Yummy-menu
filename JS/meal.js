@@ -32,7 +32,7 @@ async function loadMealDetails() {
   mealDetails.innerHTML = `
     <div class="p-1 text-white">
       <div class="row g-4  p-lg-5">
-        <div class="col-md-4">
+        <div class="col-md-4  p-lg-5">
           <img src="${
             meal.strMealThumb
           }" class="w-100 rounded-start" alt="${meal.strMeal}">
