@@ -64,7 +64,7 @@ mealsContainer.addEventListener("click", async (e) => {
    const mealCard = e.target.closest(".view-more");
   if (mealCard && mealCard.dataset.id) {
     console.log(window.location.pathname);
-    window.location.href = `/Pages/meal/meal.html?id=${mealCard.dataset.id}`;
+    window.location.href = `./Pages/meal/meal.html?id=${mealCard.dataset.id}`;
   }
 });
 
