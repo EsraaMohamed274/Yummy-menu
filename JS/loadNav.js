@@ -7,7 +7,7 @@ async function loadNav() {
     if (pathname.includes("/Pages/categories/") ||
         pathname.includes("/Pages/meal") ||
         pathname.includes("/Pages/area") ||
-        pathname.includes("/Pages/ingredients")) {
+        pathname.includes("/Pages/Ingredients")) {
       navPath = "../../components/nav.html";
     }
 
