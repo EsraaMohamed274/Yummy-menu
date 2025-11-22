@@ -63,7 +63,7 @@ function renderCategories(categories) {
       c.strCategory
     }">
         <div class="card-body p-2 text view-more">
-                    <div class="position-absolute top-50 translate-middle-y">
+        <div class="position-absolute top-50 translate-middle-y">
 
         <h5 class="card-title mb-0">${c.strCategory}</h5>
           <p class="card-text">${c.strCategoryDescription && c.strCategoryDescription.length > 20 
