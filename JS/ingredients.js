@@ -11,7 +11,6 @@ async function fetchJSON(url) {
 
 async function fetchIngredientsWithImages() {
   const data = await fetchJSON(`${apiBase}/list.php?i=list`);
-    console.log(data.meals)
   return data.meals || [];
 }
 
@@ -37,7 +36,7 @@ function renderMeals(meals) {
     const col = document.createElement("div");
     col.className = "col-12 col-md-4 col-lg-3 mb-3";
     col.innerHTML = `
-      <div class="  card meal-card meal overflow-hidden border-0">
+      <div class="  card meal-card meal overflow-hidden border-0 view-more">
         <img src="${m.strMealThumb}" class="card-img-top" alt="${m.strMeal}">
         <div class=" card-body p-2 text view-more" data-id="${m.idMeal}">
           <div class="position-absolute top-50 translate-middle-y">

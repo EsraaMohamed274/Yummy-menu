@@ -4,10 +4,12 @@ async function loadNav() {
     let navPath = "./components/nav.html";
     const pathname = window.location.pathname;
 
-    if (pathname.includes("/Pages/categories/") ||
+    if (pathname.includes("/Pages/Search/") ||
+      pathname.includes("/Pages/categories/") ||
         pathname.includes("/Pages/meal") ||
         pathname.includes("/Pages/area") ||
-        pathname.includes("/Pages/ingredients")) {
+        pathname.includes("/Pages/Ingredients") ||
+        pathname.includes("/Pages/Contact")) {
       navPath = "../../components/nav.html";
     }
 
