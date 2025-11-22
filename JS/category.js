@@ -66,7 +66,7 @@ function renderCategories(categories) {
                     <div class="position-absolute top-50 translate-middle-y">
 
         <h5 class="card-title mb-0">${c.strCategory}</h5>
-          <p class="card-text small">${c.strCategoryDescription && c.strCategoryDescription.length > 20 
+          <p class="card-text">${c.strCategoryDescription && c.strCategoryDescription.length > 20 
     ? c.strCategoryDescription.slice(0, 100)
     : c.strCategoryDescription}</p>
         </div>

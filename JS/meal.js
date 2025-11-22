@@ -30,7 +30,7 @@ async function loadMealDetails() {
   }
 
   mealDetails.innerHTML = `
-    <div class="p-1 text-white">
+    <div class="p-xl-5 text-white">
       <div class="row g-4">
         <div class="col-md-4">
           <img src="${
